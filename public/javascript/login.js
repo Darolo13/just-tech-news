@@ -15,7 +15,7 @@ async function loginFormHandler(event) {
         });
         
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
@@ -37,11 +37,11 @@ async function signupFormHandler(event) {
                 email,
                 password
             }),
-            headers: { 'Content-type': 'application/json' }
+            headers: { 'Content-Type': 'application/json' }
         });
         // check the response status
         if (response.ok) {
-            document.location.replace('/');
+            document.location.replace('/dashboard');
         } else {
             alert(response.statusText);
         }
